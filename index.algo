@@ -1,0 +1,20 @@
+PROCEDURE tri(t:ARRAY_OF INTEGER)
+VAR
+   i:INTEGER:=1;
+   j:INTEGER;
+   
+BEGIN
+    
+
+FOR i FROM 1 TO t.length STEP step  DO
+    tmp:=t[i]
+    j:=i-1
+
+WHILE (j>=0 and t[j]>tmp) DO
+    t[j+1]:=t[j];
+     j:=j-1; 
+END_WHILE
+    t[j+1]=tmp;
+END_FOR
+
+END
